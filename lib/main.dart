@@ -22,19 +22,99 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget {
   final String title;
+
+  //오류
+  // List<Widget> myChildren = [];
+
   MyHomePage({required this.title});
 
   @override
   Widget build(BuildContext context) {
+    //ListView
+    for (var i = 0; i<100; i++) {
+      myChildren.add(Text('ListView Scroll!', style: TextStyle(fontSize: 25)));
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          title,
+          this.title,
         ),
       ),
-      body: Center(
-        child: Text('Hello, Flutter!'),
-      ),
+      body:
+
+      //ListView
+        // Center(
+        //   child: ListView(
+        //     children: myChildren,
+        //   ),
+        // ),
+        // Center(
+        //   child: ListView(
+        //     scrollDirection: Axis.horizontal,
+        //     children: myChildren,
+        //   ),
+        // ),
+
+        // Padding(
+        //   child: Text('Hello, Flutter!'),
+        //   padding: EdgeInsets.all(30),
+        // ),
+
+        // Container(
+        //   child: Text('Hello, Flutter!'),
+        //   padding: EdgeInsets.all(30),
+        //   color: Colors.blue,
+        //   width: 300,
+        //   height: 300,
+        // ),
+
+        // Center(
+        //   child: Image.asset(
+        //     'images/flutter_logo.png',
+        //     width: 100,
+        //     height: 100,
+        //     ),
+        // ),
+
+        // child: Image.network(
+        //   'https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png'
+        // ),
+
+        // Center(
+        //   child: Text(
+        //     'Hello, Text Widget!',
+        //     style: TextStyle(
+        //       fontSize: 40,
+        //       fontFamily: 'WelcomeKR',
+        //       fontWeight: FontWeight.w700,
+        //       color: Colors.purple
+        //     ),
+        //   ),
+        // ),
+
+        // Center(
+        //   child: Column(
+        //     // mainAxisAlignment: MainAxisAlignment.center,
+        //     crossAxisAlignment: CrossAxisAlignment.center,
+        //     children: [
+        //       Text('1. First String', style: TextStyle(fontSize: 32)),
+        //       Text('2. First String', style: TextStyle(fontSize: 24)),
+        //       Text('3. First String', style: TextStyle(fontSize: 16)),
+        //     ],
+        //   ),
+        // ),
+
+        // Center(
+        //   child: Row(
+        //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //     children: [
+        //       Text('1. First String', style: TextStyle(fontSize: 32)),
+        //       Text('2. First String', style: TextStyle(fontSize: 24)),
+        //       Text('3. First String', style: TextStyle(fontSize: 16)),
+        //     ],
+        //   ),
+        // ),
     );
   }
 }
