@@ -30,7 +30,6 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     //ListView
     // for (var i = 0; i<50; i++) {
     //   myChildren.add(Text('ListView Scroll!', style: TextStyle(fontSize: 25)));
@@ -42,16 +41,46 @@ class MyHomePage extends StatelessWidget {
           this.title,
         ),
       ),
-      body:
-
-        Center(
-          child: ListView.builder(
-            itemCount: 50,
-            itemBuilder: (BuildContext context, int index) {
-              return Text('$index' + 'Text', style: TextStyle(fontSize: 25));
-            }
-          )
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(onPressed: () {}, child: Text('Text Button')),
+            Padding(padding: EdgeInsets.all(20)),
+            ElevatedButton(onPressed: () {}, child: Text('Elevated Button')),
+            Padding(padding: EdgeInsets.all(20)),
+            OutlineButton(onPressed: () {}, child: Text('Outline Button')),
+            Padding(padding: EdgeInsets.all(20)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.star)),
+          ],
         ),
+      ),
+
+      // Center(
+      //   child: Stack(
+      //     children: [
+      //       Image.asset('images/flutter_logo.png'),
+      //       Positioned(
+      //         left: 0,
+      //         bottom: 0,
+      //         child: Image.network(
+      //           'https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png',
+      //           width: 100,
+      //           height: 100,
+      //         ),
+      //       ),
+      //     ],
+      //   ),
+      // ),
+
+      // Center(
+      //   child: ListView.builder(
+      //     itemCount: 50,
+      //     itemBuilder: (BuildContext context, int index) {
+      //       return Text('$index' + 'Text', style: TextStyle(fontSize: 25));
+      //     }
+      //   )
+      // ),
 
       //ListView
       // Center(
