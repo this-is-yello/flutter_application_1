@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/first_screen.dart';
+import 'package:flutter_application_1/screens/second_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.indigo,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: FirstScreen(),
     );
   }
 }
@@ -30,6 +32,7 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     //ListView
     // for (var i = 0; i<50; i++) {
     //   myChildren.add(Text('ListView Scroll!', style: TextStyle(fontSize: 25)));
@@ -41,7 +44,9 @@ class MyHomePage extends StatelessWidget {
           this.title,
         ),
       ),
-      body: Center(
+      body:
+      
+      Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -49,7 +54,7 @@ class MyHomePage extends StatelessWidget {
             Padding(padding: EdgeInsets.all(20)),
             ElevatedButton(onPressed: () {}, child: Text('Elevated Button')),
             Padding(padding: EdgeInsets.all(20)),
-            OutlineButton(onPressed: () {}, child: Text('Outline Button')),
+            OutlinedButton(onPressed: () {}, child: Text('Outline Button')),
             Padding(padding: EdgeInsets.all(20)),
             IconButton(onPressed: () {}, icon: Icon(Icons.star)),
           ],
